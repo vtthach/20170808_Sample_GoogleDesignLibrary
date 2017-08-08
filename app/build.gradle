@@ -5,15 +5,15 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolsVersion
     defaultConfig {
         applicationId "com.sf0404.a20170808_sample_googledesignlibrary"
-        minSdkVersion 15
-        targetSdkVersion 26
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -25,12 +25,27 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.0', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+
+    // Kotlin dependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.0.0'
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:design:26.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // Glide
+    compile imageLoaders.glide
+    annotationProcessor imageLoaders.glideCompiler // > 4.0 only
+
+    // Support library
+    implementation utilDependencies.appcompatV7
+    implementation utilDependencies.supportDesignLibrary
+    implementation utilDependencies.constraintLayout
+
+    // Butter Knife
+    implementation utilDependencies.butterKnife
+    annotationProcessor utilDependencies.butterKnifeCompiler
+
+    // Reactive Java for Android
+    implementation utilDependencies.rxJava
+    implementation utilDependencies.rxAndroid
+
+    // Test dependencies
+    testImplementation testDependencies.junit
 }

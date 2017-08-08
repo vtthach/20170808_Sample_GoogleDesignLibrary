@@ -5,6 +5,9 @@ import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -20,7 +23,15 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.sf0404.a20170808_sample_googledesignlibrary.adapter.TabAdapter;
+
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 public class TabLayoutActivityJava extends AppCompatActivity {
 
@@ -106,6 +117,12 @@ public class TabLayoutActivityJava extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private Unbinder unBinder;
+
+        @BindView(R.id.recyclerView)
+        RecyclerView recyclerView;
+        private List<TestItem> itemList;
+        private View tvEmpty;
 
         public PlaceholderFragment() {
         }
@@ -126,9 +143,36 @@ public class TabLayoutActivityJava extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_tab_layout_activity_java, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            unBinder = ButterKnife.bind(this, rootView);
+
+            setUpRecyclerView();
             return rootView;
+        }
+
+        private void setUpRecyclerView() {
+            TabAdapter<TestItem> tabAdapter = new TabAdapter<>(getContext(), itemList, new TabAdapter.ItemClickListener<TestItem>() {
+                @Override
+                public void onItemClicked(TestItem item, int position) {
+
+                }
+            });
+
+            tabAdapter.setEmptyView(tvEmpty);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+            recyclerView.setLayoutManager(linearLayoutManager);
+            recyclerView.setAdapter(tabAdapter);
+        }
+
+        @Override
+        public void onDestroyView() {
+            super.onDestroyView();
+            if (unBinder != null) {
+                unBinder.unbind();
+            }
+        }
+
+        private static final class TestItem {
         }
     }
 
