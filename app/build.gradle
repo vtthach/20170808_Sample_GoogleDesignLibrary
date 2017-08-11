@@ -30,6 +30,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     // Glide
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile imageLoaders.glide
     annotationProcessor imageLoaders.glideCompiler // > 4.0 only
 
