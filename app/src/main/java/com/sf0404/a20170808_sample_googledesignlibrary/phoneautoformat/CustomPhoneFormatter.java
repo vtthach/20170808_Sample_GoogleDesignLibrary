@@ -1,4 +1,4 @@
-package com.sf0404.a20170808_sample_googledesignlibrary.edittext;
+package com.sf0404.a20170808_sample_googledesignlibrary.phoneautoformat;
 
 import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.text.Editable;

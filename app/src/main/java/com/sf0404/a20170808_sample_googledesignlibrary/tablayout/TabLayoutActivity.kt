@@ -1,4 +1,4 @@
-package com.sf0404.a20170808_sample_googledesignlibrary
+package com.sf0404.a20170808_sample_googledesignlibrary.tablayout
 
 import android.support.design.widget.TabLayout
 import android.support.design.widget.FloatingActionButton
@@ -20,6 +20,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import butterknife.ButterKnife
 import butterknife.Unbinder
+import com.sf0404.a20170808_sample_googledesignlibrary.R
 
 class TabLayoutActivity : AppCompatActivity() {
 

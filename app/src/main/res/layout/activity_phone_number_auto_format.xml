@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sf0404.a20170808_sample_googledesignlibrary.edittext.PhoneNumberAutoFormatActivity">
+    tools:context="com.sf0404.a20170808_sample_googledesignlibrary.phoneautoformat.PhoneNumberAutoFormatActivity">
 
     <EditText
         android:inputType="phone"

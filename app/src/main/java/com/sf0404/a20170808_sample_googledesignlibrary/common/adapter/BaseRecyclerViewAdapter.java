@@ -1,4 +1,4 @@
-package com.sf0404.a20170808_sample_googledesignlibrary.adapter;
+package com.sf0404.a20170808_sample_googledesignlibrary.common.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

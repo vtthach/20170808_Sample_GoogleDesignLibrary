@@ -1,4 +1,4 @@
-package com.sf0404.a20170808_sample_googledesignlibrary.adapter;
+package com.sf0404.a20170808_sample_googledesignlibrary.tablayout;
 
 import android.content.Context;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.request.RequestOptions;
 import com.sf0404.a20170808_sample_googledesignlibrary.R;
+import com.sf0404.a20170808_sample_googledesignlibrary.common.adapter.BaseRecyclerViewAdapter;
 
 import java.util.List;
 import java.util.Locale;

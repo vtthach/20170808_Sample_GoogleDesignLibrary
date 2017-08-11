@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.sf0404.a20170808_sample_googledesignlibrary.TabLayoutActivity">
+    tools:context="com.sf0404.a20170808_sample_googledesignlibrary.tablayout.TabLayoutActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"

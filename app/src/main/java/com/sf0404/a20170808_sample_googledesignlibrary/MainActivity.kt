@@ -3,7 +3,8 @@ package com.sf0404.a20170808_sample_googledesignlibrary
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.sf0404.a20170808_sample_googledesignlibrary.edittext.PhoneNumberAutoFormatActivity
+import com.sf0404.a20170808_sample_googledesignlibrary.phoneautoformat.PhoneNumberAutoFormatActivity
+import com.sf0404.a20170808_sample_googledesignlibrary.tablayout.TabLayoutActivityJava
 
 class MainActivity : AppCompatActivity() {
 

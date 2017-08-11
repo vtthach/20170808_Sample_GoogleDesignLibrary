@@ -30,14 +30,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     // Glide
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile imageLoaders.glide
+    implementation imageLoaders.glide
     annotationProcessor imageLoaders.glideCompiler // > 4.0 only
 
     // Support library
-    implementation utilDependencies.appcompatV7
-    implementation utilDependencies.supportDesignLibrary
-    implementation utilDependencies.constraintLayout
+    implementation googleDepedencies.appcompatV7
+    implementation googleDepedencies.supportDesignLibrary
+    implementation googleDepedencies.constraintLayout
 
     // Butter Knife
     implementation utilDependencies.butterKnife

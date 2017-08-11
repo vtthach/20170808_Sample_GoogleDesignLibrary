@@ -1,4 +1,4 @@
-package com.sf0404.a20170808_sample_googledesignlibrary;
+package com.sf0404.a20170808_sample_googledesignlibrary.tablayout;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -7,7 +7,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -21,9 +20,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.TextView;
-
-import com.sf0404.a20170808_sample_googledesignlibrary.adapter.TabAdapter;
+import com.sf0404.a20170808_sample_googledesignlibrary.MainActivity;
+import com.sf0404.a20170808_sample_googledesignlibrary.R;
 
 import org.jetbrains.annotations.NotNull;
 
